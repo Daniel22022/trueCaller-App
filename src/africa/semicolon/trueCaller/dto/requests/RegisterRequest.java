@@ -6,6 +6,11 @@ public class RegisterRequest {
     private String username;
     private String password;
     private String email;
+    private String phoneNumber;
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
 
     public String getFirstName() {
         return firstName;
@@ -45,5 +50,8 @@ public class RegisterRequest {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public void setPhoneNumber(String s) {
     }
 }
