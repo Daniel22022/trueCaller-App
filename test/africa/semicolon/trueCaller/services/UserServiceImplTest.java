@@ -1,5 +1,6 @@
 package africa.semicolon.trueCaller.services;
 
+import africa.semicolon.trueCaller.dto.requests.AddContactRequest;
 import africa.semicolon.trueCaller.dto.requests.RegisterRequest;
 import africa.semicolon.trueCaller.exceptions.UserExistException;
 
@@ -7,6 +8,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
+
 
 public class UserServiceImplTest {
 
@@ -56,4 +58,31 @@ public class UserServiceImplTest {
         assertEquals(2, userService.getNoOfUsers());
 
 }
+    @Test
+    public void addContactTest(){
+    // given that i have a user
+        iUserService userService = new UserServiceImpl();
+        // given
+        // there is a request form
+        RegisterRequest request = new RegisterRequest();
+        request.setEmail("JohnDoe@Gmail.com");
+        request.setFirstName("John");
+        request.setLastName("Doe");
+        request.setPhoneNumber("123456789");
+        request.setPassword("123456");
+
+        // when
+        userService.register(request);
+
+    //when i have contact
+        AddContactRequest addContactRequest = new AddContactRequest();
+        addContactRequest.setEmail("JohnDoe@gmail.com");
+        addContactRequest.setFirstName("Jane");
+        addContactRequest.setLastName("Doe");
+        addContactRequest.setPhoneNumber("123456789");
+        addContactRequest.setUserEmail("Danny@semicolon.com");
+        userService.addContact(addContactRequest);
+    // check that contacts size has increased
+        assertEquals(1, userService.getNoOfUsers());
+    }
 }

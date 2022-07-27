@@ -5,15 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6102e1a6-4f7f-4b8c-b9a5-88aaf10c8d6e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/africa/semicolon/trueCaller/exceptions/UserExistException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/africa/semicolon/trueCaller/services/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/africa/semicolon/trueCaller/services/UserServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/africa/semicolon/trueCaller/dto/requests/AddContactRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/africa/semicolon/trueCaller/dto/responses/AddContactResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/africa/semicolon/trueCaller/exceptions/UserDoesNotExistException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/africa/semicolon/trueCaller/data/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/africa/semicolon/trueCaller/data/repositories/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/africa/semicolon/trueCaller/data/repositories/UserRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/africa/semicolon/trueCaller/data/repositories/UserRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/africa/semicolon/trueCaller/dto/requests/RegisterRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/africa/semicolon/trueCaller/dto/requests/RegisterRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/africa/semicolon/trueCaller/dto/responses/RegisterResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/africa/semicolon/trueCaller/dto/responses/RegisterResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/africa/semicolon/trueCaller/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/africa/semicolon/trueCaller/services/iUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/africa/semicolon/trueCaller/services/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/africa/semicolon/trueCaller/services/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/africa/semicolon/trueCaller/services/iUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/africa/semicolon/trueCaller/services/iUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/africa/semicolon/trueCaller/services/UserServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/africa/semicolon/trueCaller/services/UserServiceImplTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,28 +37,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "true",
-    "Repository.Attach.JavaDocs": "true",
-    "Repository.Attach.Sources": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "last_opened_file_path": "C:/Download/trueCaller-Java/src/africa/semicolon/trueCaller/controller/data",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Download/trueCaller-Java/src/africa/semicolon/trueCaller/controller/data&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="africa.semicolon.trueCaller.dto.responses" />
+      <recent name="africa.semicolon.trueCaller.dto.requests" />
       <recent name="africa.semicolon.trueCaller.exceptions" />
       <recent name="africa.semicolon.trueCaller.services" />
     </key>
@@ -72,6 +72,9 @@
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Download\trueCaller-App\src\africa\semicolon\trueCaller" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
     </key>
@@ -80,8 +83,8 @@
       <recent name="africa.semicolon.trueCaller.data.repositories" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UserServiceImplTest">
-    <configuration name="UserRepositoryImplTest.testThatUserCanBeDeletedById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.UserServiceImplTest.addContactTest">
+    <configuration name="ContactRepositoryImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="trueCaller-Java" />
       <extension name="coverage">
         <pattern>
@@ -90,14 +93,29 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="africa.semicolon.trueCaller.data.repositories" />
-      <option name="MAIN_CLASS_NAME" value="africa.semicolon.trueCaller.data.repositories.UserRepositoryImplTest" />
-      <option name="METHOD_NAME" value="testThatUserCanBeDeletedById" />
+      <option name="MAIN_CLASS_NAME" value="africa.semicolon.trueCaller.data.repositories.ContactRepositoryImplTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ContactServiceImplTest.delete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="trueCaller-Java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="africa.semicolon.trueCaller.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="africa.semicolon.trueCaller.services" />
+      <option name="MAIN_CLASS_NAME" value="africa.semicolon.trueCaller.services.ContactServiceImplTest" />
+      <option name="METHOD_NAME" value="delete" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserRepositoryImplTest.testThatUserCanUpdateUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserRepositoryImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="trueCaller-Java" />
       <extension name="coverage">
         <pattern>
@@ -107,8 +125,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="africa.semicolon.trueCaller.data.repositories" />
       <option name="MAIN_CLASS_NAME" value="africa.semicolon.trueCaller.data.repositories.UserRepositoryImplTest" />
-      <option name="METHOD_NAME" value="testThatUserCanUpdateUser" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -128,7 +145,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserServiceImplTest.duplicateEmailThrowsException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserServiceImplTest.addContactTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="trueCaller-Java" />
       <extension name="coverage">
         <pattern>
@@ -138,23 +155,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="africa.semicolon.trueCaller.services" />
       <option name="MAIN_CLASS_NAME" value="africa.semicolon.trueCaller.services.UserServiceImplTest" />
-      <option name="METHOD_NAME" value="duplicateEmailThrowsException" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserServiceImplTest.register" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="trueCaller-Java" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="africa.semicolon.trueCaller.services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="africa.semicolon.trueCaller.services" />
-      <option name="MAIN_CLASS_NAME" value="africa.semicolon.trueCaller.services.UserServiceImplTest" />
-      <option name="METHOD_NAME" value="register" />
+      <option name="METHOD_NAME" value="addContactTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -162,11 +163,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UserServiceImplTest.addContactTest" />
+        <item itemvalue="JUnit.ContactServiceImplTest.delete" />
+        <item itemvalue="JUnit.UserRepositoryImplTest" />
+        <item itemvalue="JUnit.ContactRepositoryImplTest" />
         <item itemvalue="JUnit.UserServiceImplTest" />
-        <item itemvalue="JUnit.UserServiceImplTest.duplicateEmailThrowsException" />
-        <item itemvalue="JUnit.UserServiceImplTest.register" />
-        <item itemvalue="JUnit.UserRepositoryImplTest.testThatUserCanBeDeletedById" />
-        <item itemvalue="JUnit.UserRepositoryImplTest.testThatUserCanUpdateUser" />
       </list>
     </recent_temporary>
   </component>
@@ -183,6 +184,9 @@
       <workItem from="1658357218399" duration="213000" />
       <workItem from="1658357454669" duration="2892000" />
       <workItem from="1658360671277" duration="3958000" />
+      <workItem from="1658934699768" duration="276000" />
+      <workItem from="1658935017188" duration="3142000" />
+      <workItem from="1658939310635" duration="9148000" />
     </task>
     <task id="LOCAL-00001" summary="true caller application">
       <created>1658359174795</created>

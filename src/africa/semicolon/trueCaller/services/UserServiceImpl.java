@@ -3,7 +3,9 @@ package africa.semicolon.trueCaller.services;
 import africa.semicolon.trueCaller.data.models.User;
 import africa.semicolon.trueCaller.data.repositories.UserRepository;
 import africa.semicolon.trueCaller.data.repositories.UserRepositoryImpl;
+import africa.semicolon.trueCaller.dto.requests.AddContactRequest;
 import africa.semicolon.trueCaller.dto.requests.RegisterRequest;
+import africa.semicolon.trueCaller.dto.responses.AddContactResponse;
 import africa.semicolon.trueCaller.dto.responses.RegisterResponse;
 import africa.semicolon.trueCaller.exceptions.UserExistException;
 
@@ -30,6 +32,11 @@ public class UserServiceImpl implements iUserService{
         registerResponse.setMessage("User created successfully");
         return registerResponse;
 
+    }
+
+    @Override
+    public AddContactResponse addContact(AddContactRequest addContactRequest) {
+        return null;
     }
 
     @Override
