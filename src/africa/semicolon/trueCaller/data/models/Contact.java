@@ -10,9 +10,23 @@ public class Contact {
     }
 
     private int id;
+    private int size;
     private String firstName;
     private String lastName;
     private String phoneNumber;
+
+    @Override
+    public String toString() {
+        return "Contact{" +
+                "id=" + id +
+                ", size=" + size +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", email='" + email + '\'' +
+                '}';
+    }
+
     private String email;
 
     public String getFirstName() {
@@ -45,5 +59,13 @@ public class Contact {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public int getSize() {
+        return size;
+    }
+
+    public void setSize(int size) {
+        this.size = size;
     }
 }

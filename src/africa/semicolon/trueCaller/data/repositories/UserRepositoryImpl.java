@@ -9,6 +9,7 @@ import java.util.List;
 public class UserRepositoryImpl implements UserRepository{
     private int counter;
     private final List<User> users = new ArrayList<>();
+    private final List<Contact> contacts = new ArrayList<>();
 
     @Override
     public User save(User user) {
@@ -69,4 +70,5 @@ public class UserRepositoryImpl implements UserRepository{
         }
         return null;
     }
+
 }
