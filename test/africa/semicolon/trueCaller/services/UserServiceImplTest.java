@@ -1,9 +1,13 @@
 package africa.semicolon.trueCaller.services;
 
+import africa.semicolon.trueCaller.data.repositories.ContactRepository;
+import africa.semicolon.trueCaller.data.repositories.ContactRepositoryImpl;
+import africa.semicolon.trueCaller.data.repositories.UserRepository;
 import africa.semicolon.trueCaller.dto.requests.AddContactRequest;
 import africa.semicolon.trueCaller.dto.requests.RegisterRequest;
 import africa.semicolon.trueCaller.exceptions.UserExistException;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -11,6 +15,16 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 
 public class UserServiceImplTest {
+
+    private iUserService userService;
+    private ContactService contactService;
+    private UserRepository userRepository;
+    @BeforeEach
+    public void setUp(){
+        ContactRepository contactRepository = new ContactRepositoryImpl();
+        contactService = new ContactServiceImpl();
+        userService = new UserServiceImpl(userRepository , contactService);
+    }
 
 
 
@@ -80,9 +94,9 @@ public class UserServiceImplTest {
         addContactRequest.setFirstName("Jane");
         addContactRequest.setLastName("Doe");
         addContactRequest.setPhoneNumber("123456789");
-        addContactRequest.setUserEmail("Danny@semicolon.com");
+        addContactRequest.setUserEmail("JohnDoe@gmail.com");
         userService.addContact(addContactRequest);
     // check that contacts size has increased
-        assertEquals(1, userService.getNoOfUsers());
+       assertEquals (1, userService.findContactBelongsToUser("JohnDoe@gmail.com").size());
     }
 }
