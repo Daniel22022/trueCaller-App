@@ -12,6 +12,10 @@ public class RegisterRequest {
         return phoneNumber;
     }
 
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
     public String getFirstName() {
         return firstName;
     }
@@ -52,6 +56,4 @@ public class RegisterRequest {
         this.email = email;
     }
 
-    public void setPhoneNumber(String s) {
-    }
 }
