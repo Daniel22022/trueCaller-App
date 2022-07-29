@@ -19,11 +19,12 @@ public class Main {
         // if user selects a, b , c , d direct them
 
         String mainMenuPrompt = """
-                Welcome to TrueCaller!
-                1. Register
-                2. Add Contact To A User
-                3. Find contact belonging to a user
-                                
+                 ----------------------------------------
+                | Welcome to TrueCaller!                 |
+                | 1. Register                            |
+                | 2. Add Contact To A User               |
+                | 3. Find contact belonging to a user    |
+                 ----------------------------------------
                 """;
         System.out.println(mainMenuPrompt);
         String userInput = keyboardInput.nextLine();
@@ -36,9 +37,9 @@ public class Main {
 
     private static void createAnAccount () {
             RegisterRequest request = new RegisterRequest();
-            request.setFirstName(input("Enter The FirstName"));
-            request.setLastName(input("Enter The LastName"));
-            request.setPhoneNumber(input("Enter The PhoneNumber"));
+            request.setFirstName(input("Enter The First Name"));
+            request.setLastName(input("Enter The Last Name"));
+            request.setPhoneNumber(input("Enter The Phone Number"));
             request.setEmail(input("Enter The Email"));
             request.setPassword(input("Enter The Password"));
             userController.registerUser(request);
