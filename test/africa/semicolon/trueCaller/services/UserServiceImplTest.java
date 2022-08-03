@@ -35,9 +35,9 @@ public class UserServiceImplTest {
     // there is a request form
     RegisterRequest request = new RegisterRequest();
     request.setEmail("JohnDoe@Gmail.com");
-    request.setFirstName("John");
-    request.setLastName("Doe");
-    request.setPhoneNumber("123456789");
+    request.setUsername("John");
+//    request.setLastName("Doe");
+//    request.setPhoneNumber("123456789");
     request.setPassword("123456");
 
     // when
@@ -55,15 +55,15 @@ public class UserServiceImplTest {
         // there is a request form
         RegisterRequest request = new RegisterRequest();
         request.setEmail("JohnDoe@Gmail.com");
-        request.setFirstName("John");
-        request.setLastName("Doe");
+//        request.setFirstName("John");
+//        request.setLastName("Doe");
         request.setPassword("123456");
         request.setUsername("JohnDoyeee");
         userService.register(request);
         RegisterRequest request2 = new RegisterRequest();
         request2.setEmail("JaneDoe@gmail.com");
-        request2.setFirstName("Jane");
-        request2.setLastName("Doe");
+//        request2.setFirstName("Jane");
+//        request2.setLastName("Doe");
         request2.setPassword("123456");
         request2.setUsername("JaneDusty");
         userService.register(request2);
@@ -80,9 +80,9 @@ public class UserServiceImplTest {
         // there is a request form
         RegisterRequest request = new RegisterRequest();
         request.setEmail("JohnDoe@Gmail.com");
-        request.setFirstName("John");
-        request.setLastName("Doe");
-        request.setPhoneNumber("123456789");
+        request.setUsername("John");
+//        request.setLastName("Doe");
+//        request.setPhoneNumber("123456789");
         request.setPassword("123456");
 
         // when

@@ -40,20 +40,16 @@ public class Main {
 
     private static void createAnAccount () {
             RegisterRequest request = new RegisterRequest();
-            request.setFirstName(input("Enter The First Name"));
-            request.setLastName(input("Enter The Last Name"));
-            request.setPhoneNumber(input("Enter The Phone Number"));
+            request.setUsername(input("Enter The UserName"));
+//            request.setLastName(input("Enter The Last Name"));
+//            request.setPhoneNumber(input("Enter The Phone Number"));
             request.setEmail(input("Enter The Email"));
             request.setPassword(input("Enter The Password"));
             userController.registerUser(request);
             System.out.println("Registration Success!!!");
             displayMainMenu();
-
-
-
-
-
         }
+
         private static void addContactToAUser(){
             AddContactRequest contactRequest = new AddContactRequest();
             contactRequest.setEmail(input("Enter Contact Email"));

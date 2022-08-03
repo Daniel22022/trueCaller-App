@@ -10,8 +10,7 @@ public class ContactServiceImpl implements ContactService {
     public ContactServiceImpl contactService(){
         return null;
     }
-    public ContactServiceImpl(){
-        this.contactRepository = contactRepository;
+    public ContactServiceImpl(){this.contactRepository = contactRepository;
     }
 
     // save contact to repository

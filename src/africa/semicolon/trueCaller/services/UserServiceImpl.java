@@ -9,15 +9,18 @@ import africa.semicolon.trueCaller.data.repositories.UserRepositoryImpl;
 import africa.semicolon.trueCaller.dto.requests.AddContactRequest;
 import africa.semicolon.trueCaller.dto.requests.RegisterRequest;
 import africa.semicolon.trueCaller.dto.responses.AddContactResponse;
+import africa.semicolon.trueCaller.dto.responses.AllConTactResponse;
 import africa.semicolon.trueCaller.dto.responses.RegisterResponse;
 import africa.semicolon.trueCaller.exceptions.UserExistException;
 import africa.semicolon.trueCaller.utils.Mapper;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class UserServiceImpl implements iUserService{
     private UserRepository userRepository = new UserRepositoryImpl();
     private final ContactService contactService;
+        User user = new User();
 
     public UserServiceImpl(UserRepository userRepository,ContactService contactService) {
         this.contactService = contactService;
@@ -75,8 +78,23 @@ public class UserServiceImpl implements iUserService{
     }
 
     @Override
-    public List<Contact> findContactBelongsToUser(String userEmail) {
-        User user = userRepository.findByEmail(userEmail);
-        return user.getContacts();
+    public List<AllConTactResponse> findContactBelongsToUser(String userEmail) {
+        List<Contact> allUserContact = user.getContacts();
+        user = userRepository.findByEmail(userEmail);
+        List<AllConTactResponse> allConTactResponses = new ArrayList<>();
+        for (var contact : allUserContact) {
+            AllConTactResponse singleResponse = new AllConTactResponse();
+            singleResponse.setId(contact.getId() + "");
+            singleResponse.setFirstName(contact.getFirstName());
+            singleResponse.setLastName(contact.getLastName());
+        }
+        allUserContact.forEach(contact -> {
+            AllConTactResponse singleResponse = new AllConTactResponse();
+            singleResponse.setId(contact.getId() + "");
+            singleResponse.setFirstName(contact.getFirstName());
+            singleResponse.setLastName(contact.getLastName());
+            allConTactResponses.add(singleResponse);
+        });
+        return allConTactResponses;
     }
 }
