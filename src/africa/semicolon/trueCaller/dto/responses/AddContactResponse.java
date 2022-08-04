@@ -6,4 +6,8 @@ import lombok.Data;
 public class AddContactResponse {
     private String message;
 
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
 }

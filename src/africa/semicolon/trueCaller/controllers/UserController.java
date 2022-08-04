@@ -6,7 +6,8 @@ import africa.semicolon.trueCaller.dto.responses.AddContactResponse;
 import africa.semicolon.trueCaller.dto.responses.AllConTactResponse;
 import africa.semicolon.trueCaller.dto.responses.RegisterResponse;
 import africa.semicolon.trueCaller.exceptions.UserExistException;
-import africa.semicolon.trueCaller.services.UserServiceImpl;
+import africa.semicolon.trueCaller.services.iUserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -15,7 +16,8 @@ import java.util.List;
 
 @RestController
 public class UserController {
-    private final UserServiceImpl userService = new UserServiceImpl();
+    @Autowired
+    private iUserService userService;
 
     @PostMapping("/user")
     public ResponseEntity<?> registerUser(@RequestBody RegisterRequest registerRequest) {

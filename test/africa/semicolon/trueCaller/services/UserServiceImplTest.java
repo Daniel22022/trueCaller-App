@@ -1,7 +1,6 @@
 package africa.semicolon.trueCaller.services;
 
 import africa.semicolon.trueCaller.data.repositories.ContactRepository;
-import africa.semicolon.trueCaller.data.repositories.ContactRepositoryImpl;
 import africa.semicolon.trueCaller.data.repositories.UserRepository;
 import africa.semicolon.trueCaller.dto.requests.AddContactRequest;
 import africa.semicolon.trueCaller.dto.requests.RegisterRequest;
@@ -21,9 +20,8 @@ public class UserServiceImplTest {
     private UserRepository userRepository;
     @BeforeEach
     public void setUp(){
-        ContactRepository contactRepository = new ContactRepositoryImpl();
         contactService = new ContactServiceImpl();
-        userService = new UserServiceImpl(userRepository , contactService);
+        userService = new UserServiceImpl();
     }
 
 
